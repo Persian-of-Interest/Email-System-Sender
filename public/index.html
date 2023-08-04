@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html ng-app="ConfirmationEmailApp">
+<head>
+  <title>Email System Sender</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body ng-controller="EmailController">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+  <script src="app.js"></script>
+
+  <div class="container">
+    <div class="content">
+      <h1>Email System Sender</h1>
+      <form ng-submit="submitEmail()">
+        <label>Name:</label>
+        <input type="text" ng-model="name" required>
+        <br/>
+        <label>Email:</label>
+        <input type="email" ng-model="email" required>
+        <br/>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+    <div ng-if="confirmationMessage" class="confirmation-message">{{ confirmationMessage }}</div>
+  </div>
+</body>
+</html>
